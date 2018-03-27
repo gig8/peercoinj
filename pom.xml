@@ -22,7 +22,7 @@
 
   <name>motacoinj Parent</name>
   <description>Provides the common configuration for the MotaCoinJ modules</description>
-  <url>https://github.com/MatthewLM/motacoinj/</url>
+  <url>https://github.com/gig8/motacoinj/</url>
 
   <licenses>
     <license>
@@ -35,7 +35,7 @@
 
   <issueManagement>
     <system>Github Issues</system>
-    <url>https://github.com/MatthewLM/motacoinj/issues</url>
+    <url>https://github.com/gig8/motacoinj/issues</url>
   </issueManagement>
 
 

@@ -8,7 +8,7 @@ The motacoinj library is a Java implementation of the MotaCoin protocol, which a
 * [Maven 3+](http://maven.apache.org) - for building the project
 * [Orchid](https://github.com/subgraph/Orchid) - for secure communications over [TOR](https://www.torproject.org)
 * [Google Protocol Buffers](https://code.google.com/p/protobuf/) - for use with serialization and hardware communications
-* [MotaCoinAbeExplorer](https://github.com/MatthewLM/MotaCoinAbeExplorer) - server code which provides block hashes and acts as block explorer
+* [MotaCoinAbeExplorer](https://github.com/gig8/MotaCoinAbeExplorer) - server code which provides block hashes and acts as block explorer
 
 ### Getting started
 
