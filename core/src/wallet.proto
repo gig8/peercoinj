@@ -24,7 +24,7 @@
 
 package wallet;
 
-option java_package = "com.matthewmitchell.peercoinj.wallet";
+option java_package = "com.gig8.motacoinj.wallet";
 option java_outer_classname = "Protos";
 
 message PeerAddress {
@@ -207,7 +207,7 @@ message TransactionConfidence {
   optional Source source = 7;
 }
 
-/** A peercoin transaction */
+/** A motacoin transaction */
 
 message Transaction {
   /**
@@ -339,8 +339,8 @@ message Wallet {
   }
 
   required string network_identifier = 1; // the network used by this wallet
-  // org.peercoin.production = production network (Satoshi genesis block)
-  // org.peercoin.test = test network (Andresen genesis block)
+  // org.motacoin.production = production network (Satoshi genesis block)
+  // org.motacoin.test = test network (Andresen genesis block)
 
   // The SHA256 hash of the head of the best chain seen by this wallet.
   optional bytes last_seen_block_hash = 2;
