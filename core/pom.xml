@@ -20,19 +20,19 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.matthewmitchell</groupId>
-        <artifactId>peercoinj-parent</artifactId>
+        <groupId>com.gig8</groupId>
+        <artifactId>motacoinj-parent</artifactId>
         <version>0.13.0</version>
     </parent>
 
-    <artifactId>peercoinj</artifactId>
+    <artifactId>motacoinj</artifactId>
 
-    <name>peercoinj</name>
-    <description>A Java Peercoin library</description>
+    <name>motacoinj</name>
+    <description>A Java MotaCoin library</description>
 
     <packaging>jar</packaging>
 
-    <url>https://github.com/MatthewLM/peercoinj</url>
+    <url>https://github.com/gig8/motacoinj</url>
 
     <licenses>
         <license>
@@ -138,7 +138,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Verify the dependency chain: see https://github.com/gary-rowe/PeercoinjEnforcerRules for
+            <!-- Verify the dependency chain: see https://github.com/gary-rowe/MotaCoinjEnforcerRules for
                more information on this.
             -->
             <plugin>
@@ -256,7 +256,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.matthewmitchell.peercoinj.BitcoindComparisonTool</mainClass>
+                                    <mainClass>com.gig8.motacoinj.BitcoindComparisonTool</mainClass>
                                     <addClasspath>false</addClasspath>
                                 </manifest>
                             </archive>
@@ -287,7 +287,7 @@
             <version>3.0</version>
             <scope>test</scope>
         </dependency>
-        <!-- peercoinj consumers are expected to provide their own SLF4J adapters
+        <!-- motacoinj consumers are expected to provide their own SLF4J adapters
              such as logback, slf4j-log4j12, slf4j-jcl and so on
              see http://www.slf4j.org/faq.html -->
         <dependency>
@@ -348,7 +348,7 @@
         </dependency>
         -->
         <dependency>
-            <groupId>com.matthewmitchell</groupId>
+            <groupId>com.gig8</groupId>
             <artifactId>orchid</artifactId>
             <version>1.0</version>
         </dependency>

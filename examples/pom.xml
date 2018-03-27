@@ -19,21 +19,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.matthewmitchell</groupId>
-        <artifactId>peercoinj-parent</artifactId>
+        <groupId>com.gig8</groupId>
+        <artifactId>motacoinj-parent</artifactId>
         <version>0.13.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>peercoinj-examples</artifactId>
+    <artifactId>motacoinj-examples</artifactId>
 
-    <name>peercoinj Examples</name>
-    <description>A collection of examples using the peercoinj library</description>
+    <name>motacoinj Examples</name>
+    <description>A collection of examples using the motacoinj library</description>
 
     <dependencies>
         <dependency>
-            <groupId>com.matthewmitchell</groupId>
-            <artifactId>peercoinj</artifactId>
+            <groupId>com.gig8</groupId>
+            <artifactId>motacoinj</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
