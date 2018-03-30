@@ -30,30 +30,24 @@ public class MainNetParams extends NetworkParameters {
         super();
         interval = INTERVAL;
         targetTimespan = TARGET_TIMESPAN;
-        maxTarget = Utils.decodeCompactBits(0x1d00ffffL);
-        dumpedPrivateKeyHeader = 183;
-        addressHeader = 55;
-        p2shHeader = 117;
+        maxTarget = Utils.decodeCompactBits(504365055L);
+        dumpedPrivateKeyHeader = 183; // TU ??
+        addressHeader = 55; // TU ??
+        p2shHeader = 117; // TU ??
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
-        port = 9901;
-        packetMagic= 0xe6e8e9e5L;
-        genesisBlock.setDifficultyTarget(0x1d00ffffL);
-        genesisBlock.setTime(1345084287L);
-        genesisBlock.setNonce(2179302059L);
+        port = 17420;
+        packetMagic= 0x304a304a;
+        genesisBlock.setDifficultyTarget(504365055L);
+        genesisBlock.setTime(1521404888L);
+        genesisBlock.setNonce(145590L);
         id = ID_MAINNET;
-        spendableCoinbaseDepth = 500;
+        spendableCoinbaseDepth = 10;
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("0000000032fe677166d54963b62a4677d8957e87c508eaa4fd7eb1c880cd27e3"), genesisHash);
-
-        checkpoints.put(19080, new Sha256Hash("000000000000bca54d9ac17881f94193fd6a270c1bb21c3bf0b37f588a40dbd7"));
-        checkpoints.put(30583, new Sha256Hash("d39d1481a7eecba48932ea5913be58ad3894c7ee6d5a8ba8abeb772c66a6696e"));
-        checkpoints.put(99999, new Sha256Hash("27fd5e1de16a4270eb8c68dee2754a64da6312c7c3a0e99a7e6776246be1ee3f"));
+        checkState(genesisHash.equals("00000fea25f87416682baa54946a1d156909d0959588eb573a0ae16a64230c61"), genesisHash);
+        checkpoints.put(25, new Sha256Hash("000001cc753748395adc5bada031b8df33ab40ac6cbff52babef0c56ebdc0bc3"));
 
         dnsSeeds = new String[] {
-            "motaseed.ns.7server.net",
-                "seed.diandianbi.org",
-                "seed.motaoin.net", 
-                "tnseed.motaoin.net",
+            "explorer.motacoin.vip",
         };
     }
 

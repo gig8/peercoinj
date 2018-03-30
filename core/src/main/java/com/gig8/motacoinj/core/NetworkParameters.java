@@ -44,12 +44,12 @@ public abstract class NetworkParameters implements Serializable {
     /**
      * The protocol version this library implements.
      */
-    public static final int PROTOCOL_VERSION = 60012;
+    public static final int PROTOCOL_VERSION = 60013; // TU src/version.h:static const int PROTOCOL_VERSION = 60013;
 
     /**
      * The alert signing key.
      */
-    public static final byte[] SATOSHI_KEY = Utils.HEX.decode("04a0a849dd49b113d3179a332dd77715c43be4d0076e2f19e66de23dd707e56630f792f298dfd209bf042bb3561f4af6983f3d81e439737ab0bf7f898fecd21aab");
+    public static final byte[] SATOSHI_KEY = Utils.HEX.decode("04fbf80ea797ebcced8fc6efcc3cdf6681f443e90ed1ec345a9c33739ee4a1f6adaba440e6cfcc48e2e49b6a85453f526695f97e84fc1704cc50b74f15981a5b30");
 
     /** The string returned by getId() for the main, production network where people trade things. */
     public static final String ID_MAINNET = "org.motacoin.production";
@@ -93,13 +93,13 @@ public abstract class NetworkParameters implements Serializable {
     private static Block createGenesis(NetworkParameters n) {
         Block genesisBlock = new Block(n);
         Transaction t = new Transaction(n);
-        t.setTime(1345083810);
+        t.setTime(1521404888);
         try {
             // A script containing the difficulty bits and the following message:
             //
-            //   "Matonis 07-AUG-2012 Parallel Currencies And The Roadmap To Monetary Freedom"
+            //   "POTUS Tweets:'And yet, there is NO COLLUSION!'"
             byte[] bytes = Utils.HEX.decode
-                    ("04ffff001d020f274b4d61746f6e69732030372d4155472d3230313220506172616c6c656c2043757272656e6369657320416e642054686520526f61646d617020546f204d6f6e65746172792046726565646f6d");
+                    ("00012a2e504f545553205477656574733a27416e64207965742c207468657265206973204e4f20434f4c4c5553494f4e2127");
             t.addInput(new TransactionInput(n, t, bytes));
             ByteArrayOutputStream scriptPubKeyBytes = new ByteArrayOutputStream();
             t.addOutput(new TransactionOutput(n, t, ZERO, scriptPubKeyBytes.toByteArray()));
@@ -110,13 +110,13 @@ public abstract class NetworkParameters implements Serializable {
         genesisBlock.addTransaction(t);
         
         String merkleHash = genesisBlock.getMerkleRoot().toString();
-        checkState(merkleHash.equals("3c2d8f85fab4d17aac558cc648a1a58acff0de6deb890c29985690052c5993c2"), merkleHash);
+        checkState(merkleHash.equals("b3d8b0c93a5a36fc81b2cdc8a5ca2adb781f4d22530cd4671cf2e2c8181754d6"), merkleHash);
         
         return genesisBlock;
     }
 
-    public static final int TARGET_TIMESPAN = 7 * 24 * 60 * 60;  // 1 day.
-    public static final int TARGET_SPACING = 10 * 60;  // 10 minutes per block.
+    public static final int TARGET_TIMESPAN = 60 * 60; // 1 hr
+    public static final int TARGET_SPACING = 4 * 60 + 20; // 4 minute 20 sec
     public static final int INTERVAL = 1; // Every block
     
     /**
@@ -124,9 +124,9 @@ public abstract class NetworkParameters implements Serializable {
      * network rules in a soft-forking manner, that is, blocks that don't follow the rules are accepted but not
      * mined upon and thus will be quickly re-orged out as long as the majority are enforcing the rule.
      */
-    public static final int BIP16_ENFORCE_TIME = 1333238400;
+    public static final int BIP16_ENFORCE_TIME = 1333238400; // TU ??
 
-    public static final long MAX_COINS = 2000000000L;
+    public static final long MAX_COINS = 90000000L;
     public static final Coin MAX_MONEY = COIN.multiply(MAX_COINS);
 
     /** Alias for MainNetParams.get(), use that instead */
